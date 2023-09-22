@@ -1,13 +1,2 @@
 #!/bin/bash
-
-# Get a list of all users from the `/etc/passwd` file
-users=$(getent passwd | cut -d: -f1)
-
-# Sort the list of users alphabetically
-sorted_users=$(echo $users | sort)
-
-# Iterate over the sorted list of users and display their home directories
-for user in $sorted_users; do
-    home_dir=$(getent passwd $user | cut -d: -f6)
-    echo "$user: $home_dir"
-done
+find  -type f -name "*.gif" | rev | cut -d "/" -f 1 | cut -d '.' -f 2- | rev | LC_ALL=C sort -f
