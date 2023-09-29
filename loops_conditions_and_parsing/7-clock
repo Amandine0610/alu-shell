@@ -2,16 +2,14 @@
 # displays the time for 12 hours and 59 minutes
 hours=0
 minutes=1
-count=0
-while [ $hours -lt 12 ] && [ $count -lt 70 ]
+while [ $hours -lt 13 ]
 do
 	echo "Hour: $hours"
-while [ $minutes -lt 60 ] && [ $count -lt 70 ]
+while [ $minutes -lt 60 ] 
 do
 	echo "$minutes"
 	minutes=$(( minutes + 1 ))
-	count=$(( count + 1 ))
 done
 hours=$(( hours + 1 ))
 minutes=1
-done
+done | head -n 70
