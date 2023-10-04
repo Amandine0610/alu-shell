@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#displays lines containing the bash word;user-oriented list of currently running processes
+ps aux --forest | grep "bash"
+
