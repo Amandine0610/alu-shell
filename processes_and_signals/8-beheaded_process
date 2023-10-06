@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#this program kills task 7
+pkill -9 "7-highlander"
+
